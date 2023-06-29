@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<title>Széchenyi István University</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      color: #244339;
+      padding-left: 20px;
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      padding-left: 20px;
+    }
+
+    b {
+      color: #242943;
+    }
+
+    .accordion {
+      background-color: #eee;
+      color: #242943;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 20px;
+      transition: 0.4s;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .active {
+      background-color: #f5f5f5;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .accordion:hover {
+      background-color: #f6f6f6;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .panel {
+      font-family: 'Roboto', sans-serif;
+      padding: 0 18px;
+      background-color: #fcfcfc;
+      color: #5f647c;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+
+    body {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .w3-button {
+      background-color: #242943;
+      color: #f0f0f0;
+      font-family: 'Roboto', sans-serif;
+      padding: 10px;
+      margin: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Széchenyi István University</h2>
+  <p>Széchenyi István University</p>
+  <img src="img/infologo02.svg" />
+  <a href="https://github.com/sze-info/thesis/blob/master/readme.md" class="w3-button w3-block">How to write a thesis</a>
+  <a href="https://github.com/sze-info/thesis-template-latex" class="w3-button w3-block">Thesis Latex template</a>
+  <a href="https://github.com/sze-info/ProgrammingBasics" class="w3-button w3-block">Programming basics [GKNB_INTA023]</a>
+  <a href="https://sze-info.github.io/arj/" class="w3-button w3-block">Autonomous robots and vehicles software engineering [GKNB_AUTM078]</a>
+  <a href="https://it.sze.hu/" class="w3-button w3-block">Website of the department</a>
+
+
+
+
+
+
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>
